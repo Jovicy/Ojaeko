@@ -378,3 +378,104 @@ img {
     transition: opacity 0.3s ease-in-out;
 }
 
+@media (max-width: 768px) {
+  .form-container {
+    padding: 10px;
+    height: auto;
+  }
+
+  .main-form {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form-img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .form-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .set-main {
+    width: 100%;
+    align-items: center;
+  }
+
+  .set-title h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .form-logo {
+    width: 100px;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .form-select-div {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .form-select-first {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-select-title h3 {
+    font-size: 18px;
+  }
+
+  .form-select-title p {
+    font-size: 13px;
+  }
+
+  .form-input-div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .set-form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-btn-cont {
+    width: 100%;
+  }
+
+  .set-form-btn {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .yellow-btn,
+  .green-btn,
+  .ash-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .modal-box {
+    margin: 0 16px;
+    width: 100%;
+  }
+
+  .modal-text {
+    font-size: 0.95rem;
+  }
+}
