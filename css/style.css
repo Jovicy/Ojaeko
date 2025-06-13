@@ -3,6 +3,7 @@
 :root {
     --body-family: 'Poppins', sans-serif;
     --body-color: #f4f4f4;
+    --primary-color: #FDBF0C;
 }
 
 * {
@@ -11,9 +12,369 @@
     box-sizing: border-box;
 }
 
+li,
+a {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
 body {
     width: 100%;
     font-family: var(--body-family);
     background-color: var(--body-color);
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 400;
 }
+
+span {
+    color: var(--primary-color);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.form-container {
+    padding: 20px;
+    height: 100vh;
+}
+
+.main-form {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.form-img {
+    width: 50%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content {
+    width: 50%;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.set-main {
+    width: 90%;
+    align-items: center;
+}
+
+.set-title {
+    text-align: center;
+}
+
+.login-content {
+    padding: 50px 80px 50px 0px;
+
+}
+
+.form-content h1 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.form-logo {
+    width: 130px;
+    display: flex;
+    justify-content: start;
+    text-align: left;
+}
+
+.p {
+    color: #5D5D5D;
+}
+
+.form-select {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-select-div {
+    background-color: #E7E7E7;
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 528px;
+    height: 108px;
+}
+
+.form-select-first {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.select-icon i {
+    background-color: var(--primary-color);
+    border-radius: 100px;
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.form-select-title h3 {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.form-select-title p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.form-alt {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.yellow-btn {
+    background-color: var(--primary-color);
+    color: #BA6703;
+    padding: 16px 24px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.form-main form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-main-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-input-div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-input {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-full {
+    width: 100%;
+}
+
+.form-input input, select {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 100px;
+    border: 1px solid #E7E7E7;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.form-input input:focus {
+    outline: none;
+    border: 1px solid var(--primary-color);
+}
+.form-input input::placeholder {
+    color: #E7E7E7;
+}
+
+.form-input label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-btn-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.ash-btn {
+    background-color: #E7E7E7;
+    color: #B0B0B0;
+    padding: 16px 24px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.set-ash-btn {
+    width: auto;
+}
+
+.set-form-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-btn-cont p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.set-form {
+    background-color: #f0f0f0;
+    width: 666px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+}
+
+.set-form input, select {
+    background-color: #fff;
+}
+
+.set-tile p {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modal-text {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.modal-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.modal-btn:hover {
+  background-color: #218838;
+}
+
+.green-btn {
+  background-color: #28a745; /* Bootstrap-like green */
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+}
+
+.green-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.green-btn:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+}
+
+#line-image {
+    transition: opacity 0.3s ease-in-out;
+}
+

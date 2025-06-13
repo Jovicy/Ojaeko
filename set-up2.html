@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/Oja Eko logo_Favicon.png" />
+    <!-- Title -->
+    <title>Profile Setup - IILASG</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+        .green-btn {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .yellow-btn {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        .ash-btn {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="main-form">
+            <div class="form-content set-main">
+                <div class="form-logo">
+                    <img src="./images/Logo.png" alt="Oja Eko Logo" />
+                </div>
+                <div class="form-title set-title">
+                    <h1>
+                        <span>Welcome to IILASG Marketplace</span> where <br />
+                        community meets commerce.
+                    </h1>
+                    <p>
+                        You’re in! Now let’s setup your profile in 2 simple steps <br />
+                        to personalize your experience.
+                    </p>
+                </div>
+                <div class="set-form">
+                    <div>
+                        <img id="line-image"  src="./images/half-line.png" alt="" />
+                    </div>
+                    <div class="set-tile">
+                        <p>
+                            Help us get to know you better. Choose your location identity
+                        </p>
+                    </div>
+                    <div class="form-main-cont">
+                        <div class="form-input-div">
+                            <!-- First Select -->
+                            <div class="form-input input-full">
+                                <label for="lagosian-status">Are you a Lagosian?</label>
+                                <select id="lagosian-status" name="lagosian-status" required>
+                                    <option value="">-- Please select an option --</option>
+                                    <option value="yes">Yes, I’m Lagosian</option>
+                                    <option value="no">No, I’m not Lagosian</option>
+                                </select>
+                            </div>
+
+                            <!-- Second Select (hidden by default) -->
+                            <div class="form-input input-full" id="lga-container" style="display: none;">
+                                <label for="lga">Select Your LGA</label>
+                                <select id="lga" name="lga">
+                                    <option value="">-- Select LGA --</option>
+                                    <option value="ikeja">Ikeja</option>
+                                    <option value="surulere">Surulere</option>
+                                    <option value="kosofe">Kosofe</option>
+                                    <option value="eti-osa">Eti-Osa</option>
+                                    <option value="alimosho">Alimosho</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="set-form-btn">
+                        <a href="./set-up2.html">Skip</a>
+                        <button id="continue-btn" class="ash-btn set-ash-btn">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="verifyModal" style="display: none;" class="modal-overlay">
+        <div class="modal-box">
+            <img src="./images/oja-successful.png" alt="Verification Success" />
+            <p class="modal-text">
+                Thanks for submitting your details. Our team is currently reviewing your verification request.
+                While we verify your information, you can start shopping!
+            </p>
+            <a href="./home.html" class="modal-btn"> <!-- Replace with actual shopping link -->
+                <i class="fa-solid fa-cart-shopping"></i> Start Shopping
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Script -->
+    <script src="https://kit.fontawesome.com/74b0f74a10.js" crossorigin="anonymous"></script>
+    <script>
+        const lagosianSelect = document.getElementById("lagosian-status");
+        const lgaContainer = document.getElementById("lga-container");
+        const lgaSelect = document.getElementById("lga");
+        const continueBtn = document.getElementById("continue-btn");
+        const lineImage = document.getElementById("line-image");
+
+        const modal = document.getElementById("verifyModal");
+
+        function updateButton(state) {
+            continueBtn.classList.remove("ash-btn", "yellow-btn", "green-btn");
+
+            if (state === "verify") {
+                continueBtn.textContent = "Verify Status";
+                continueBtn.classList.add("yellow-btn");
+            } else if (state === "shop") {
+                continueBtn.textContent = "Proceed"; // 🔄 change from "Start Shopping"
+                continueBtn.classList.add("green-btn");
+            } else {
+                continueBtn.textContent = "Continue";
+                continueBtn.classList.add("ash-btn");
+            }
+        }
+
+        lagosianSelect.addEventListener("change", function () {
+            const value = this.value;
+
+            if (value === "yes") {
+                lgaContainer.style.display = "block";
+                updateButton("verify");
+                lineImage.src = "./images/full-line.png";
+            } else if (value === "no") {
+                lgaContainer.style.display = "none";
+                updateButton("shop");
+                lineImage.src = "./images/full-line.png";
+            } else {
+                lgaContainer.style.display = "none";
+                updateButton("default");
+                lineImage.src = "./images/half-line.png";
+            }
+        });
+
+        continueBtn.addEventListener("click", function (e) {
+            const selectedLagosian = lagosianSelect.value;
+
+            if (selectedLagosian === "yes") {
+                if (!lgaSelect.value) {
+                    alert("Please select your LGA to proceed.");
+                    return;
+                }
+                e.preventDefault();
+                modal.style.display = "flex";
+            }
+
+            if (selectedLagosian === "no") {
+                e.preventDefault();
+                modal.style.display = "flex";
+            }
+        });
+
+        window.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

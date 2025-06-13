@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/Oja Eko logo_Favicon.png">
+    <!-- Title -->
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="main-form">
+            <div class="form-img">
+                <img src="./images/create-img.png" alt="">
+            </div>
+            <div class="form-content login-content">
+                <div class="form-main">
+                    <div class="form-nav">
+                        <a href="./index.html" class="form-nav-link">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <p>Back</p>
+                        </a>
+                    </div>
+                    <div class="form-title">
+                        <h1>Log in to your account</h1>
+                        <p>Welcome back, please enter your details.</p>
+                    </div>
+                    <div class="form-alt">
+                        <button class="yellow-btn"><i class="fa-brands fa-google"></i> Log in with Google</button>
+                        <div>
+                            <img src="./images/or-img.png" alt="or separator">
+                        </div>
+                    </div>
+                    <form action="dashboard.html"> <!-- Change to actual login handler if needed -->
+                        <div class="form-main-cont">
+                            <div class="form-input-div">
+                                <div class="form-input input-full">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required
+                                        placeholder="e.g AdesanyaM@gmail.com">
+                                </div>
+                            </div>
+                            <div class="form-input-div">
+                                <div class="form-input input-full">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-btn-cont">
+                            <button type="submit" class="ash-btn">Log In</button>
+                            <p>Don't have an account? <span><a href="./create.html">Create one</a></span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Tag -->
+    <script src="https://kit.fontawesome.com/74b0f74a10.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
